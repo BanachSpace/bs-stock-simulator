@@ -104,6 +104,8 @@ figure;
 plot(TimeArray,S);
 hold on;
 
+%% In the follwing for-loop it will plot the explicit solution to the SDE as derived with Ito's lemma
+
 for i = 1 : trials;
     temp = S(1) *exp((mu-0.5*sigma*sigma)*TimeArray+sigma*BM(TimeArray));
     plot(TimeArray,temp);
